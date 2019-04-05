@@ -1,0 +1,221 @@
+h1,
+.h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2,
+.h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3,
+.h3 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+h4,
+.h4 {
+  font-weight: bold;
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+  color: #ffb86c;
+}
+
+.App {
+  max-width: 100%;
+  display: grid;
+  grid-template:
+    [row1-start] "header" auto [row1-end]
+    [row2-start] "main" 1fr [row2-end]
+    [row3-start] "footer" 100px [row3-end]
+    / 1fr;
+  grid-gap: 15px;
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template:
+    [row1-start] ". name links ." 50px [row1-end]
+    / 15px 1fr 1fr 15px;
+  grid-gap: 15px;
+  position: fixed;
+  width: 100%;
+  background: #44475a;
+}
+
+header .name {
+  grid-area: name;
+}
+
+header .links {
+  grid-area: links;
+  text-align: right;
+  line-height: 100%;
+}
+
+main {
+  grid-area: main;
+  padding-top: 50px;
+}
+
+main.about-me .item {
+  margin: 15px;
+  display: grid;
+  grid-template: auto / 1fr;
+  grid-gap: 15px;
+  grid-auto-flow: row;
+}
+
+main.about-me .item.large {
+  grid-template: auto / 1fr;
+}
+
+main.about-me .item > * {
+  grid-column-end: span 1;
+  border-radius: 5px;
+  background-color: rgb(40, 42, 54);
+  background-color: rgba(40, 42, 54, 0.75);
+  padding: 15px;
+}
+
+header,
+main.about-me .item > *:first-child {
+  border-radius: 0;
+  border-bottom: 1px solid #8be9fd;
+}
+
+main.about-me .item > *:first-child {
+  background-color: transparent;
+}
+
+main.about-me .item.showcase img.screengrab {
+  overflow-y: hidden;
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  grid-auto-flow: dense;
+  margin: 10px 0;
+}
+
+footer > div {
+  align-self: center;
+}
+
+footer div.copyright {
+  grid-column: 4;
+  text-align: right;
+}
+
+.fab,
+.fas,
+.logo {
+  margin: 10px 0 10px 5px;
+  font-size: 2rem;
+  max-height: 2rem;
+  text-align: center;
+  color: #8be9fd;
+}
+
+.callout,
+a.callout,
+.callout .fas {
+  color: #50fa7b;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.callout .fas {
+  padding: 0 10px;
+  font-size: 1.25rem;
+}
+
+a {
+  color: #50fa7b;
+  fill: #50fa7b;
+  text-decoration: none;
+}
+
+a:hover,
+a.callout:hover {
+  text-decoration: underline;
+}
+
+main.about-me .item > a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-link {
+  text-decoration: none;
+}
+
+.social-link:hover .fab {
+  color: #50fa7b;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .App {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  header {
+    position: relative;
+    grid-template:
+      [row1-start] "name links" 50px [row1-end]
+      / 1fr 1fr;
+  }
+
+  main.about-me .item {
+    margin: 15px 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  main.about-me .item.large {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main.about-me .item > *:first-child,
+  main.about-me .item > .wide {
+    grid-column-end: span 3;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  main {
+    padding: 0;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .App {
+    max-width: 1170px;
+  }
+
+  main.about-me {
+    /* grid-template-columns: repeat(4, 1fr); */
+  }
+}
