@@ -30,6 +30,10 @@ h2,
   color: #ffb86c;
 }
 
+p {
+  line-height: 1.25;
+}
+
 .App {
   max-width: 100%;
   display: grid;
@@ -51,6 +55,7 @@ header {
   position: fixed;
   width: 100%;
   background: #44475a;
+  box-shadow: 0 5px 5px 5px #44475a;
 }
 
 header .name {
@@ -83,7 +88,7 @@ main.about-me .item.large {
 main.about-me .item > * {
   grid-column-end: span 1;
   border-radius: 5px;
-  background-color: rgb(40, 42, 54);
+  background-color: #282a36;
   background-color: rgba(40, 42, 54, 0.75);
   padding: 15px;
 }
@@ -130,12 +135,25 @@ footer div.copyright {
   color: #8be9fd;
 }
 
-.callout,
 a.callout,
 .callout .fas {
   color: #50fa7b;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+a.callout {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #50fa7b;
+  padding: 10px;
+  margin: 0 10px 0 0;
+}
+
+a.callout:hover {
+  color: #282a36;
+  background-color: #50fa7b;
   text-decoration: none;
 }
 
@@ -150,8 +168,7 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a.callout:hover {
+a:hover {
   text-decoration: underline;
 }
 
@@ -185,6 +202,7 @@ main.about-me .item > a {
     grid-template:
       [row1-start] "name links" 50px [row1-end]
       / 1fr 1fr;
+    box-shadow: none;
   }
 
   main.about-me .item {
