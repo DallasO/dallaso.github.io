@@ -10,6 +10,7 @@ export default () => {
       <div className="links">
         <Social icon="github" />
         <Social icon="linkedin" />
+        <Social icon="hackerrank" />
       </div>
     </header>
   );
