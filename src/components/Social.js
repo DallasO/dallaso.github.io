@@ -15,6 +15,12 @@ export default (props) => {
           <i className="fab fa-linkedin"></i>
         </a>
       );
+    case 'hackerrank':
+      return (
+        <a className="social-link" href="https://www.hackerrank.com/opeltd/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-hackerrank"></i>
+        </a>
+      );
     default:
       return null;
   };
