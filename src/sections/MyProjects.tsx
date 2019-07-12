@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import Project from './Project.js';
+import Project from "../components/Project";
 
 export default () => {
   return (
