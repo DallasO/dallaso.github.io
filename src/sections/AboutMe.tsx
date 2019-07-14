@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export default function AboutMe(): JSX.Element {
   return (
     <div className="item">
       <div>
@@ -14,40 +14,33 @@ export default () => {
             href="https://www.linkedin.com/in/dallasopelt"
             className="callout"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
-            Message&nbsp;me&nbsp;on&nbsp;LinkedIn!
+            {"Message me on LinkedIn!"}
           </a>
         </p>
-        <p>Full stack Web Developer located in the greater Seattle area.</p>
+        <p>{"Full stack Web Developer located in the greater Seattle area."}</p>
         <p>
-          As a Web Developer, I've used many technologies to create beautiful
-          frontends and featureful backends. I believe in mobile and UX first
-          design.
+          {
+            "As a Web Developer, I've used many technologies to create beautiful frontends and featureful backends. I believe in mobile and UX first design."
+          }
         </p>
         <p>
-          Recently, I've focused on the frontend working directly with the
-          marketing department to translate content into code for landing pages
-          and emails. This included HTML5, CSS3, JavaScript and jQuery, as well
-          as working with multiple Content Management Systems to capture
-          customer data or host my code. I even used jQuery to implement an
-          autocomplete search box to allow users to search for a product. This
-          search also supported fuzzy searching, so the user doesn't have to be
-          exact with their query.
+          {
+            "I'm currently helping a startup to revolutionize an industry while using React, Typescript, Node, Express, and MongoDB to name a few technologies. This statup is creating a marketing platform for producers of a niche product to communicate directly to their consumers, while giving consumers transparency into what they are buying."
+          }
         </p>
         <p>
-          I've also worked as a full stack web developer helping multiple
-          clients of various size. I specialized in the XCart eCommerce
-          software, which is powered by PHP. I would fix mobile issues, add
-          features to the backend and additional functionality to the store
-          front, and apply security patches to XCart.
+          {
+            "I've been a Web Developer for 5 years, working with directly with clients or business users. The projects I've worked on range from small hobby eCommerce stores, to large global companies. I've also worked with all kinds of languages and had to learn new technologies. See my list of skills below."
+          }
         </p>
         <p>
-          I'm currently working on projects using technologies such as Python,
-          Django, and React. One of my projects is working with a data set so I
-          can analyze trends, and visualize the data with a charting framework.
+          {
+            "One of my current projects is working with Python, Django, and React to analyze trends of a data set, and visualize the data with a charting framework. I'm looking forward to the challenges each step of the way."
+          }
         </p>
       </div>
     </div>
   );
-};
+}

@@ -1,49 +1,34 @@
 import React from "react";
+import { mySkills } from "../data/mySkills";
 
-export default () => {
+export default function MySkills(): JSX.Element {
   return (
     <div className="item">
-      <h2>My Skills</h2>
-      <div>
-        <i className="fab fa-html5"></i>
-        <i className="fab fa-css3"></i>
-        <i className="fab fa-js-square"></i>
-        <i className="fab fa-react"></i>
-        <h3>Frontend</h3>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript</li>
-          <li>AJAX</li>
-          <li>jQuery</li>
-          <li>React</li>
-        </ul>
-      </div>
-      <div>
-        <i className="fab fa-php"></i>
-        <i className="fab fa-python"></i>
-        <i className="fas fa-terminal"></i>
-        <h3>Backend</h3>
-        <ul>
-          <li>PHP</li>
-          <li>Python</li>
-          <li>Django</li>
-          <li>Bash</li>
-        </ul>
-      </div>
-      <div>
-        <i className="fab fa-linux"></i>
-        <i className="fab fa-wordpress"></i>
-        <i className="fab fa-drupal"></i>
-        <h3>Additional</h3>
-        <ul>
-          <li>SQL</li>
-          <li>Linux</li>
-          <li>XCart</li>
-          <li>WordPress</li>
-          <li>Drupal</li>
-        </ul>
-      </div>
+      <h2>Skills</h2>
+      {mySkills &&
+        mySkills.map(
+          (skill, skillInd): JSX.Element => (
+            <div key={"skill_" + skillInd}>
+              <div className="skills">
+                <h3>{skill.title}</h3>
+                <div className="skill-icons">
+                  {skill.icons.map(
+                    (icon: string, skillIconInd): JSX.Element => (
+                      <i className={icon} key={"skillIcon_" + skillIconInd}></i>
+                    )
+                  )}
+                </div>
+                <div className="skill-titles">
+                  {skill.skills.map(
+                    (sk: string, skillSkillInd): JSX.Element => (
+                      <span key={"skillSkill_" + skillSkillInd}>{sk}</span>
+                    )
+                  )}
+                </div>
+              </div>
+            </div>
+          )
+        )}
     </div>
   );
-};
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import Social from "./Social";
 
-export default () => {
+export default function Header(): JSX.Element {
   return (
     <header className="App-header">
       <div className="name">
@@ -14,4 +14,4 @@ export default () => {
       </div>
     </header>
   );
-};
+}
