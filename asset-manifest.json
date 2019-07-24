@@ -1,16 +1,16 @@
 {
-  "main.css": "/static/css/main.6b567ab0.chunk.css",
-  "main.js": "/static/js/main.44be19f0.chunk.js",
-  "main.js.map": "/static/js/main.44be19f0.chunk.js.map",
+  "main.css": "/static/css/main.106b775c.chunk.css",
+  "main.js": "/static/js/main.c5dd8c65.chunk.js",
+  "main.js.map": "/static/js/main.c5dd8c65.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
   "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.a68ccf2f.chunk.js": "/static/js/2.a68ccf2f.chunk.js",
-  "static/js/2.a68ccf2f.chunk.js.map": "/static/js/2.a68ccf2f.chunk.js.map",
+  "static/js/2.20f26895.chunk.js": "/static/js/2.20f26895.chunk.js",
+  "static/js/2.20f26895.chunk.js.map": "/static/js/2.20f26895.chunk.js.map",
   "index.html": "/index.html",
-  "precache-manifest.6e5ec1c76bc513adde18673f9d809a78.js": "/precache-manifest.6e5ec1c76bc513adde18673f9d809a78.js",
+  "precache-manifest.012063c81df316ce831041a00691730a.js": "/precache-manifest.012063c81df316ce831041a00691730a.js",
   "service-worker.js": "/service-worker.js",
-  "static/css/main.6b567ab0.chunk.css.map": "/static/css/main.6b567ab0.chunk.css.map",
-  "static/media/crucible-brewing.png": "/static/media/crucible-brewing.5cebe2f9.png",
+  "static/css/main.106b775c.chunk.css.map": "/static/css/main.106b775c.chunk.css.map",
+  "static/media/crucible-brewing.png": "/static/media/crucible-brewing.4a6c5261.png",
   "static/media/iittala-logo.svg": "/static/media/iittala-logo.90d68de5.svg",
-  "static/media/iittala.png": "/static/media/iittala.5e8679a7.png"
+  "static/media/iittala.png": "/static/media/iittala.1183e8b6.png"
 }
