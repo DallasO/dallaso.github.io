@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/crucible-brewing.4a6c5261.png"
   },
   {
-    "revision": "95cf049720fee5b0d93c",
+    "revision": "7aadfc0776366e7d4034",
     "url": "/static/css/main.7d18cf1b.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = [
     "url": "/static/js/2.1c659d39.chunk.js"
   },
   {
-    "revision": "e6f2fac75edf42baa1250d8bc4c82b7f",
-    "url": "/static/media/cannabinder.e6f2fac7.png"
+    "revision": "429bba7b43388d0bd3f23bd65965e9e7",
+    "url": "/static/media/cannabinder.429bba7b.png"
   },
   {
-    "revision": "95cf049720fee5b0d93c",
-    "url": "/static/js/main.e120f27e.chunk.js"
+    "revision": "7aadfc0776366e7d4034",
+    "url": "/static/js/main.de8e9f32.chunk.js"
   },
   {
     "revision": "a4ce6e74f5199e119946c015b5aa5693",
@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "/static/media/iittala-logo.90d68de5.svg"
   },
   {
-    "revision": "a1f84fa460b4482bcc3fe3aec015c2cc",
-    "url": "/static/media/wamal.a1f84fa4.png"
+    "revision": "57add2bdf186b626c238a27fc40bb416",
+    "url": "/static/media/wamal.57add2bd.png"
   },
   {
-    "revision": "5abcaed747337b396598e0421f35b933",
+    "revision": "f49af871bdccd3c530d7030600562515",
     "url": "/index.html"
   }
 ];
