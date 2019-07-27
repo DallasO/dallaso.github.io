@@ -5,12 +5,18 @@ export interface SocialIconProps {
   link?: string;
 }
 
-export default (props: SocialIconProps) => {
+export default function Social(props: SocialIconProps): JSX.Element | null {
+  const { link } = props;
   switch (props.icon) {
     case "github":
-      const link = props.link || "https://github.com/DallasO";
       return (
-        <a className="social-link" href={link} target="_blank" rel="noopener">
+        <a
+          className="social-link"
+          href={link || "https://github.com/DallasO"}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="GitHub"
+        >
           <i className="fab fa-github"></i>
         </a>
       );
@@ -18,9 +24,10 @@ export default (props: SocialIconProps) => {
       return (
         <a
           className="social-link"
-          href="https://www.linkedin.com/in/dallasopelt/"
+          href={link || "https://www.linkedin.com/in/dallasopelt/"}
+          rel="noopener noreferrer"
           target="_blank"
-          rel="noopener"
+          title="LinkedIn"
         >
           <i className="fab fa-linkedin"></i>
         </a>
@@ -29,9 +36,10 @@ export default (props: SocialIconProps) => {
       return (
         <a
           className="social-link"
-          href="https://www.hackerrank.com/opeltd/"
+          href={link || "https://www.hackerrank.com/opeltd/"}
+          rel="noopener noreferrer"
           target="_blank"
-          rel="noopener"
+          title="HackerRank"
         >
           <i className="fab fa-hackerrank"></i>
         </a>
@@ -39,4 +47,4 @@ export default (props: SocialIconProps) => {
     default:
       return null;
   }
-};
+}

@@ -10,7 +10,7 @@ import MyProjects from "./sections/MyProjects";
 import Footer from "./components/Footer";
 
 class App extends Component {
-  render() {
+  public render(): JSX.Element {
     return (
       <div className="App">
         <Header />

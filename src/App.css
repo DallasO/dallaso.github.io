@@ -50,7 +50,7 @@ header {
   display: grid;
   grid-template:
     [row1-start] ". name links ." 50px [row1-end]
-    / 15px 1fr 1fr 15px;
+    / 0 1fr 1fr 0;
   grid-gap: 15px;
   position: fixed;
   width: 100%;
@@ -81,10 +81,6 @@ main.about-me .item {
   grid-auto-flow: row;
 }
 
-main.about-me .item.large {
-  grid-template: auto / 1fr;
-}
-
 main.about-me .item > * {
   grid-column-end: span 1;
   border-radius: 5px;
@@ -103,8 +99,8 @@ main.about-me .item > *:first-child {
   background-color: transparent;
 }
 
-main.about-me .item.showcase img.screengrab {
-  overflow-y: hidden;
+main.about-me .item .showcase {
+  text-align: justify;
 }
 
 footer {
@@ -113,7 +109,7 @@ footer {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
   grid-auto-flow: dense;
-  margin: 10px 0;
+  margin: 10px;
 }
 
 footer > div {
@@ -190,6 +186,26 @@ main.about-me .item > a {
   height: auto;
 }
 
+.skills {
+  display: flex;
+}
+
+.skills .skill-icons,
+.skills .skill-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.skills h3 {
+  flex-grow: 0.5;
+}
+
+.skills .skill-icons .fab,
+.skills .skill-icons .fas {
+  margin: 2px 10px 2px 0;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .App {
@@ -205,13 +221,13 @@ main.about-me .item > a {
     box-shadow: none;
   }
 
+  footer {
+    margin: 10px 0;
+  }
+
   main.about-me .item {
     margin: 15px 0;
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  main.about-me .item.large {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   main.about-me .item > *:first-child,
@@ -231,9 +247,5 @@ main.about-me .item > a {
 @media (min-width: 1200px) {
   .App {
     max-width: 1170px;
-  }
-
-  main.about-me {
-    /* grid-template-columns: repeat(4, 1fr); */
   }
 }
