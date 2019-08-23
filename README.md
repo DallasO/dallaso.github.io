@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/DallasO/dallaso.github.io.svg?style=svg)](https://circleci.com/gh/DallasO/dallaso.github.io)
 # Welcome to my Portfolio
 
 This is the codebase for my portfolio. It is built with React and Typescript, and is hosted here on GitHub.
