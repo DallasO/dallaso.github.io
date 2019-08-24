@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build:
+    branches: 
+      ignore: 
+        - master
     docker:
       - image: circleci/node:10.15.2
     steps:
@@ -18,10 +21,8 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: test
+          name: run-lint
+          command: npm run lint:ts
+      - run:
+          name: run-tests
           command: npm test
-      - store_artifacts:
-          path: test-results.xml
-          prefix: tests
-      - store_test_results:
-          path: test-results.xml
