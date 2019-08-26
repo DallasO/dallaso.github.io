@@ -4,7 +4,7 @@ export interface MyProjectsProps {
   href: string;
 }
 
-export const myProjects: MyProjectsProps[] = [
+export const MyProjectsData: MyProjectsProps[] = [
   {
     title: "My Portfolio",
     desc:
