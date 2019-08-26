@@ -1,7 +1,7 @@
 import React from "react";
 
-import Project from "../components/Project";
-import { myProjects } from "../data/myProjects";
+import Project from "./generic/Project";
+import { MyProjectsData as myProjects } from "./data/MyProjectsData";
 
 export default function MyProjects(): JSX.Element {
   return (
