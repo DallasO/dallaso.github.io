@@ -4,7 +4,7 @@ export interface MySkillsProps {
   icons: string[];
 }
 
-export const mySkills: MySkillsProps[] = [
+export const MySkillsData: MySkillsProps[] = [
   {
     title: "Frontend",
     skills: [
@@ -31,7 +31,16 @@ export const mySkills: MySkillsProps[] = [
   },
   {
     title: "Additional",
-    skills: ["npm", "mongoDB", "SQL", "Linux", "XCart", "WordPress", "Drupal"],
+    skills: [
+      "npm",
+      "mongoDB",
+      "SQL",
+      "Linux",
+      "Postman",
+      "XCart",
+      "WordPress",
+      "Drupal"
+    ],
     icons: ["fab fa-npm", "fab fa-linux", "fab fa-wordpress", "fab fa-drupal"]
   }
 ];

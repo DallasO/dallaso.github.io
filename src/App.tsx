@@ -2,12 +2,10 @@ import React, { Component } from "react";
 
 import "./App.css";
 
-import Header from "./components/Header";
-import AboutMe from "./sections/AboutMe";
-import MySkills from "./sections/MySkills";
-import MyWork from "./sections/MyWork";
-import MyProjects from "./sections/MyProjects";
-import Footer from "./components/Footer";
+import Header from "./components/generic/Header";
+import Footer from "./components/generic/Footer";
+
+import HomePage from "./pages/HomePage";
 
 class App extends Component {
   public render(): JSX.Element {
@@ -15,12 +13,7 @@ class App extends Component {
       <div className="App">
         <Header />
 
-        <main className="about-me">
-          <AboutMe />
-          <MySkills />
-          <MyWork />
-          <MyProjects />
-        </main>
+        <HomePage />
 
         <Footer />
       </div>

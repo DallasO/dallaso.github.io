@@ -1,5 +1,5 @@
 import React from "react";
-import { mySkills } from "../data/mySkills";
+import { MySkillsData as mySkills } from "./data/MySkillsData";
 
 export default function MySkills(): JSX.Element {
   return (

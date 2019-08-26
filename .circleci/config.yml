@@ -1,28 +1,44 @@
 version: 2
 jobs:
-  build:
-    branches: 
-      ignore: 
-        - master
+
+  checkout_code:
     docker:
-      - image: circleci/node:10.15.2
+    - image: circleci/node:10.15.2
     steps:
-      - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: install-npm-wee
-          command: npm install
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
-      - run:
-          name: run-lint
-          command: npm run lint:ts
-      - run:
-          name: run-tests
-          command: npm test
+    - checkout
+    - run:
+        name: update-npm
+        command: sudo npm install -g npm@latest
+    - restore_cache:
+        key: dependency-cache-{{ checksum "package.json" }}
+    - run:
+        name: install-npm-wee
+        command: npm install
+    - save_cache:
+        key: dependency-cache-{{ checksum "package.json" }}
+        paths:
+        - ./node_modules
+
+  test:
+    docker:
+    - image: circleci/node:10.15.2
+    parallelism: 2
+    steps:
+    - run:
+        name: run-lint
+        command: npm run lint:ts
+    - run:
+        name: run-tests
+        command: npm test
+workflows:
+  version: 2
+  run_tests:
+    jobs:
+      - checkout_code:
+          filters:
+            branches:
+              ignore:
+              - master
+      - test:
+          requires:
+            - checkout_code
