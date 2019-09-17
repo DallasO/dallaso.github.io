@@ -4,6 +4,8 @@ jobs:
   test:
     docker:
     - image: circleci/node:10.15.2
+    environment:
+      NODE_ENV: development
     steps:
     - checkout
     - run:

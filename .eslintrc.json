@@ -13,7 +13,7 @@
   },
   "rules": {
     "prettier/prettier": ["error", { "doubleQuote": true }],
-    "trailingComma": "es5"
+    "comma-dangle": ["error", "never"]
   },
   "settings": {
     "react": {
