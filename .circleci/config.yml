@@ -1,0 +1,37 @@
+version: 2
+jobs:
+
+  test:
+    docker:
+    - image: circleci/node:10.15.2
+    environment:
+      NODE_ENV: development
+    steps:
+    - checkout
+    - run:
+        name: update-npm
+        command: sudo npm install -g npm@latest
+    - restore_cache:
+        key: dependency-cache-{{ checksum "package.json" }}
+    - run:
+        name: install-npm-wee
+        command: npm i
+    - save_cache:
+        key: dependency-cache-{{ checksum "package.json" }}
+        paths:
+        - ./node_modules
+    - run:
+        name: run-lint
+        command: npm run lint:ts
+    - run:
+        name: run-tests
+        command: npm test
+workflows:
+  version: 2
+  run_tests:
+    jobs:
+      - test:
+          filters:
+            branches:
+              ignore:
+              - master
