@@ -28,8 +28,8 @@ export default function MyWork(): JSX.Element {
                 )}
               </a>
               {myWork.description.map(
-                (desc, i): JSX.Element => (
-                  <p key={"desc-" + i}>{desc}</p>
+                (desc): JSX.Element => (
+                  <p key={`desc_${Math.random()}`}>{desc}</p>
                 )
               )}
               <a href={myWork.link} target="_blank" rel="noopener noreferrer">

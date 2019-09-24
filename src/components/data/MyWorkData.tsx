@@ -63,3 +63,5 @@ export const MyWorkData: MyWorkProps[] = [
     alt: "Washington Alaskan Malamute Adoption League (WAMAL)"
   }
 ];
+
+export default MyWorkData;

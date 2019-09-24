@@ -44,3 +44,5 @@ export const MySkillsData: MySkillsProps[] = [
     icons: ["fab fa-npm", "fab fa-linux", "fab fa-wordpress", "fab fa-drupal"]
   }
 ];
+
+export default MySkillsData;
