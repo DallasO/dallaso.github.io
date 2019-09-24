@@ -5,7 +5,7 @@ export default function Header(): JSX.Element {
   return (
     <header className="App-header">
       <div className="name">
-        <h4>Dallas Opelt</h4>
+        <h1 className="h4">Dallas Opelt</h1>
       </div>
       <div className="links">
         <Social icon="github" />

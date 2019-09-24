@@ -28,8 +28,14 @@ export default function MyWork(): JSX.Element {
                 )}
               </a>
               {myWork.description.map(
-                (desc, i): JSX.Element => (
-                  <p key={"desc-" + i}>{desc}</p>
+                (desc): JSX.Element => (
+                  <p
+                    key={`desc_${alt
+                      .split(" ")
+                      .join("")}_${new Date().getTime()}`}
+                  >
+                    {desc}
+                  </p>
                 )
               )}
               <a href={myWork.link} target="_blank" rel="noopener noreferrer">
