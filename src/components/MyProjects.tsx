@@ -10,17 +10,16 @@ export default function MyProjects(): JSX.Element {
         <h2>Projects</h2>
         <p>Check out my great projects!</p>
       </div>
-      {myProjects &&
-        myProjects.map(
-          (project, projInd): JSX.Element => (
-            <Project
-              title={project.title}
-              desc={project.desc}
-              href={project.href}
-              key={"project_" + projInd}
-            />
-          )
-        )}
+      {myProjects.map(
+        (project): JSX.Element => (
+          <Project
+            title={project.title}
+            desc={project.desc}
+            href={project.href}
+            key={`project_${project.title.split(" ").join("")}`}
+          />
+        )
+      )}
     </div>
   );
 }

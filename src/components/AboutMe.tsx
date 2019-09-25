@@ -4,11 +4,11 @@ export default function AboutMe(): JSX.Element {
   return (
     <div className="item">
       <div>
-        <h1>Dallas Opelt</h1>
+        <h2 className="h1">Dallas Opelt</h2>
         <h2>Web Developer</h2>
       </div>
       <div className="wide">
-        <h4>Looking for new opportunities!</h4>
+        <h3 className="h4">Looking for new opportunities!</h3>
         <p>
           <a
             href="https://www.linkedin.com/in/dallasopelt"
@@ -19,7 +19,7 @@ export default function AboutMe(): JSX.Element {
             {"Message me on LinkedIn!"}
           </a>
         </p>
-        <p>{"Full stack Web Developer located in the greater Seattle area."}</p>
+        <p>Full stack Web Developer located in the greater Seattle area.</p>
         <p>
           {
             "As a Web Developer, I've used many technologies to create beautiful frontends and featureful backends. I believe in mobile and UX first design."

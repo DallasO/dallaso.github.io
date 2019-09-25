@@ -17,7 +17,7 @@ export default function Social(props: SocialIconProps): JSX.Element | null {
           target="_blank"
           title="GitHub"
         >
-          <i className="fab fa-github"></i>
+          <i className="fab fa-github" />
         </a>
       );
     case "linkedin":
@@ -29,7 +29,7 @@ export default function Social(props: SocialIconProps): JSX.Element | null {
           target="_blank"
           title="LinkedIn"
         >
-          <i className="fab fa-linkedin"></i>
+          <i className="fab fa-linkedin" />
         </a>
       );
     case "hackerrank":
@@ -41,7 +41,7 @@ export default function Social(props: SocialIconProps): JSX.Element | null {
           target="_blank"
           title="HackerRank"
         >
-          <i className="fab fa-hackerrank"></i>
+          <i className="fab fa-hackerrank" />
         </a>
       );
     default:

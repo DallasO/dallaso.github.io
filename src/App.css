@@ -20,7 +20,10 @@ h3,
 
 h4,
 .h4 {
+  color: inherit;
+  font-size: 1rem;
   font-weight: bold;
+  text-align: left;
 }
 
 h1,
@@ -60,6 +63,10 @@ header {
 
 header .name {
   grid-area: name;
+}
+
+header .name h1.h4 {
+  margin: 15px 0;
 }
 
 header .links {

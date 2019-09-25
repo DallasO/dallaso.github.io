@@ -36,3 +36,5 @@ export const MyProjectsData: MyProjectsProps[] = [
     href: "https://github.com/DallasO/launch-all-browsers"
   }
 ];
+
+export default MyProjectsData;
