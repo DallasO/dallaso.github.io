@@ -8,17 +8,6 @@ export default function AboutMe(): JSX.Element {
         <h2>Web Developer</h2>
       </div>
       <div className="wide">
-        <h3 className="h4">Looking for new opportunities!</h3>
-        <p>
-          <a
-            href="https://www.linkedin.com/in/dallasopelt"
-            className="callout"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {"Message me on LinkedIn!"}
-          </a>
-        </p>
         <p>Full stack Web Developer located in the greater Seattle area.</p>
         <p>
           {
