@@ -8,7 +8,6 @@ export default function MyProjects(): JSX.Element {
     <div className="item">
       <div>
         <h2>Projects</h2>
-        <p>Check out my great projects!</p>
       </div>
       {myProjects.map(
         (project): JSX.Element => (

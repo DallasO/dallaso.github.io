@@ -7,7 +7,6 @@ export default function MyWork(): JSX.Element {
     <div className="item large">
       <div>
         <h2>Experience</h2>
-        <p>Check out some of my work!</p>
       </div>
       {MyWorkData.map(
         (myWork): JSX.Element => {
