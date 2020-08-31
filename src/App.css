@@ -46,6 +46,7 @@ p {
     [row3-start] "footer" 100px [row3-end]
     / 1fr;
   grid-gap: 15px;
+  position: relative;
 }
 
 header {
@@ -55,7 +56,6 @@ header {
     [row1-start] ". name links ." 50px [row1-end]
     / 0 1fr 1fr 0;
   grid-gap: 15px;
-  position: fixed;
   width: 100%;
   background: #44475a;
   box-shadow: 0 5px 5px 5px #44475a;

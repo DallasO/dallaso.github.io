@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Cornerstone";
+  src: url("./fonts/CornerstoneFF/Cornerstone.ttf");
+}
 html,
 body {
   margin: 0;
