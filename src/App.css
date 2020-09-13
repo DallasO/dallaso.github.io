@@ -113,7 +113,7 @@ main.about-me .item .showcase {
 footer {
   grid-area: footer;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
   grid-auto-flow: dense;
   margin: 10px;

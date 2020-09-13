@@ -1,5 +1,12 @@
-import React from "react";
-import { a, SpringValue, to, useSpring, useTrail } from "react-spring";
+import React, { useRef, useState } from "react";
+import {
+  a,
+  to,
+  useChain,
+  useSpring,
+  useTrail,
+  useTransition
+} from "react-spring";
 // Styles
 import styled from "styled-components";
 
@@ -64,18 +71,38 @@ const bannerText = [
   </>
 ];
 
-type TransitionProps = {
-  opacity: SpringValue<number>;
-  height: SpringValue<string>;
-};
+function Banner(): JSX.Element {
+  const [banner, setBannner] = useState(true);
 
-type BannerProps = {
-  show: boolean;
-  toggleBanner: Function;
-  transition: TransitionProps;
-};
-
-function Banner({ show, toggleBanner, transition }: BannerProps): JSX.Element {
+  // BEGIN:: BackgroundSpring
+  const backgroundRef = useRef(null);
+  const backgroundTransition = useSpring({
+    ref: backgroundRef,
+    opacity: 1,
+    height: banner ? "100vh" : "5vh",
+    from: {
+      opacity: 0,
+      height: "0vh"
+    }
+  });
+  // END:: BackgroundSpring
+  // BEGIN :: Banner transition
+  const bannerRef = useRef(null);
+  const bannerTransition = useTransition(banner, {
+    from: { height: "0%", opacity: 0 },
+    enter: { height: "50%", opacity: 1 },
+    leave: { height: "0%", opacity: 0 },
+    ref: bannerRef
+  });
+  // END :: Banner transition
+  // BEGIN:: text trail
+  const textTrail = useTrail(bannerText.length, {
+    opacity: banner ? 1 : 0,
+    height: banner ? 80 : 0,
+    x: banner ? 0 : 40,
+    from: { opacity: 0, height: 0, x: 40 }
+  });
+  // END:: text trail
   // BEGIN:: Button
   const [{ color, z }, set] = useSpring(() => ({
     config: { friction: 13 },
@@ -83,46 +110,55 @@ function Banner({ show, toggleBanner, transition }: BannerProps): JSX.Element {
     z: 0
   }));
   // END:: Button
-  // BEGIN:: text trail
-  const textTrail = useTrail(bannerText.length, {
-    opacity: show ? 1 : 0,
-    height: 80,
-    x: 0,
-    from: { opacity: 0, height: 0, x: 40 }
-  });
-  // END:: text trail
+  useChain(banner ? [backgroundRef, bannerRef] : [bannerRef, backgroundRef], [
+    0,
+    0.25
+  ]);
+
+  const handleClick = (): void => {
+    setBannner(state => !state);
+    set({ color: "#8be9fd", z: 0 });
+  };
 
   return (
-    <Container style={transition as any}>
-      <TextContainer href="https://blacklivesmatter.com/" target="_blank">
-        {textTrail.map(({ x, height, ...rest }, index) => (
-          <TrailText
-            key={index}
-            style={
-              {
-                ...rest,
-                transform: to([x], x => `translate3d(0,${x}px,0)`)
-              } as any
-            }
-          >
-            <a.span style={{ height }}>{bannerText[index]}</a.span>
-          </TrailText>
-        ))}
-      </TextContainer>
+    <Container style={backgroundTransition as any}>
+      {bannerTransition(
+        (style, item) =>
+          item && (
+            <TextContainer
+              style={style as any}
+              href="https://blacklivesmatter.com/"
+              target="_blank"
+            >
+              {textTrail.map(({ x, height, ...rest }, index) => (
+                <TrailText
+                  key={index}
+                  style={
+                    {
+                      ...rest,
+                      transform: to([x], x => `translate3d(0,${x}px,0)`)
+                    } as any
+                  }
+                >
+                  <a.span style={{ height }}>{bannerText[index]}</a.span>
+                </TrailText>
+              ))}
+            </TextContainer>
+          )
+      )}
       <CloseButton
         aria-label="Close banner"
-        onClick={(): void => toggleBanner()}
+        onClick={(): void => handleClick()}
         onMouseEnter={(): any => set({ color: "#50fa7b", z: 180 })}
         onMouseLeave={(): any => set({ color: "#8be9fd", z: 0 })}
         style={
           {
-            color,
-            opacity: transition.opacity
+            color
           } as any
         }
       >
         <a.i
-          className="fas fa-times"
+          className={`fas ${banner ? "fa-times" : "fa-arrow-down"}`}
           style={{
             transform: to([z], z => `rotate(${z}deg)`)
           }}

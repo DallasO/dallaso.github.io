@@ -15,4 +15,4 @@ The list will return the container and list of icons, the string will return onl
 * Provide option for light theme
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is built with [GatsbyJS](https://www.gatsbyjs.com/) and [ReactJS](https://reactjs.org/).
