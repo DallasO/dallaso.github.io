@@ -24,7 +24,7 @@
     "debug": "npm i --no-save && npm run clean && npm run develop",
     "develop": "gatsby develop",
     "predeploy": "npm run build",
-    "deploy": "cp -r .circleci/ build/ && npm run ghpages",
+    "deploy": "cp -r .circleci/ public/ && npm run ghpages",
     "ghpages": "gh-pages -b master -d public -t",
     "build": "gatsby build",
     "serve": "gatsby serve",
