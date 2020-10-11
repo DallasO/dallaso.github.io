@@ -8,18 +8,27 @@ import wamal from "../../img/wamal.png";
 
 export interface MyWorkProps {
   link: string;
-  title: string | JSX.Element;
+  title: string;
+  titleAlt?: JSX.Element;
   description: string[];
-  image: string;
+  image?: string;
   alt?: string;
 }
 
 export const MyWorkData: MyWorkProps[] = [
   {
+    link: "https://www.valencelevel.com/",
+    title: "Valence",
+    description: [
+      "Building potential by enabling partners to utilize the latest technologies. Used Unity3D and targeted the Oculus Quest, to build a virtual training room experience for onboarding, knowledge archive, and training. Created a reservation system and customer portal for launching satelites into space via rideshare launches. And many more exciting projects."
+    ]
+    // image: cannabinder
+  },
+  {
     link: "https://www.Cannabinder.com",
     title: "Cannabinder",
     description: [
-      "Currently helping a startup bring a new marketing platform to market. This project is a public API powered by Node, Express, and MongoDB, as well as a frontend webapp powered by React and Typescript."
+      "Contributed to a startup that empowered consumers by giving them a resource to find reliable and repeatable experiences. This project is a public API powered by Node, Express, and MongoDB, as well as a frontend webapp powered by React and Typescript."
     ],
     image: cannabinder
   },
@@ -33,7 +42,8 @@ export const MyWorkData: MyWorkProps[] = [
   },
   {
     link: "https://iittala.com.au",
-    title: (
+    title: "Iittala",
+    titleAlt: (
       <img src={IittalaLogo} alt="Iittala" className="img-responsive logo" />
     ),
     description: [
