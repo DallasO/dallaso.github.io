@@ -126,8 +126,9 @@ footer div.copyright {
 
 .fab,
 .fas,
-.logo {
-  margin: 10px 0 10px 5px;
+.logo,
+.skillIcon {
+  margin: 10px 5px;
   font-size: 2rem;
   max-height: 2rem;
   text-align: center;
@@ -191,22 +192,32 @@ main.about-me .item > a {
 
 .skills {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: -15px;
 }
 
-.skills .skill-icons,
-.skills .skill-titles {
+/* DEPRECATE */
+.skills .skill,
+/* DEPRECATE */
+.skills .skill {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 15px;
 }
 
 .skills h3 {
   flex-grow: 0.5;
 }
 
-.skills .skill-icons .fab,
-.skills .skill-icons .fas {
-  margin: 2px 10px 2px 0;
+/* DEPRECATE */
+.skills .skill .fab,
+/* DEPRECATE */
+.skills .skill .fas,
+.skills .skill .skillIcon {
+  margin: 4px auto;
 }
 
 /* Small devices (tablets, 768px and up) */

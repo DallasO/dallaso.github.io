@@ -8,27 +8,15 @@ export default function MySkills(): JSX.Element {
       {mySkills.map(
         (skill): JSX.Element => (
           <div key={`skill_${skill.title.split(" ").join("")}`}>
+            <h3>{skill.title}</h3>
             <div className="skills">
-              <h3>{skill.title}</h3>
-              <div className="skill-icons">
-                {skill.icons.map(
-                  (icon: string): JSX.Element => (
-                    <i
-                      className={icon}
-                      key={`skillIcon_${icon.split(" ").join("")}`}
-                    />
-                  )
-                )}
-              </div>
-              <div className="skill-titles">
-                {skill.skills.map(
-                  (sk: string): JSX.Element => (
-                    <span key={`skillSkill_${sk.split(" ").join("")}`}>
-                      {sk}
-                    </span>
-                  )
-                )}
-              </div>
+              {skill.skills.map(({ skill, icon, iconClass }) => (
+                <div className="skill" key={skill}>
+                  {iconClass && <i className={iconClass} />}
+                  {icon && <img className="skillIcon" src={icon} alt={skill} />}
+                  <span>{skill}</span>
+                </div>
+              ))}
             </div>
           </div>
         )

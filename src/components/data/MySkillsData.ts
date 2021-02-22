@@ -1,47 +1,69 @@
+import Gatsby from "../../img/Gatsby-Logo.svg";
+import Typescript from "../../img/Typescript-Logo.svg";
+import Unity3D from "../../img/Unity3D-Logo.svg";
+
 export interface MySkillsProps {
+  icons?: any;
   title: string;
-  skills: string[];
-  icons: string[];
+  skills: {
+    skill: string;
+    iconClass?: string;
+    icon?: string;
+  }[];
 }
 
 export const MySkillsData: MySkillsProps[] = [
   {
     title: "Frontend",
     skills: [
-      "React",
-      "Typescript",
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "AJAX",
-      "jQuery"
-    ],
-    icons: [
-      "fab fa-react",
-      "fab fa-ts",
-      "fab fa-html5",
-      "fab fa-css3",
-      "fab fa-js-square"
+      {
+        skill: "React",
+        iconClass: "fab fa-react"
+      },
+      {
+        skill: "Gatsby",
+        icon: Gatsby
+      },
+      {
+        skill: "Typescript",
+        icon: Typescript
+      },
+      {
+        skill: "HTML5",
+        iconClass: "fab fa-html5"
+      },
+      {
+        skill: "CSS3",
+        iconClass: "fab fa-css3"
+      },
+      {
+        skill: "JavaScript",
+        iconClass: "fab fa-js-square"
+      }
     ]
   },
   {
     title: "Backend",
-    skills: ["Node", "Express", "PHP", "Python", "Django", "Bash"],
-    icons: ["fab fa-node", "fab fa-php", "fab fa-python", "fas fa-terminal"]
+    skills: [
+      { skill: "Node", iconClass: "fab fa-node" },
+      { skill: "Express" },
+      { skill: "Python", iconClass: "fab fa-python" },
+      { skill: "Bash", iconClass: "fas fa-terminal" },
+      { skill: "PHP", iconClass: "fab fa-php" },
+      { skill: "Django" }
+    ]
   },
   {
-    title: "Additional",
+    title: "Other",
     skills: [
-      "npm",
-      "mongoDB",
-      "SQL",
-      "Linux",
-      "Postman",
-      "XCart",
-      "WordPress",
-      "Drupal"
-    ],
-    icons: ["fab fa-npm", "fab fa-linux", "fab fa-wordpress", "fab fa-drupal"]
+      { skill: "Unity3D", icon: Unity3D },
+      { skill: "npm", iconClass: "fab fa-npm" },
+      { skill: "mongoDB" },
+      { skill: "SQL" },
+      { skill: "Linux", iconClass: "fab fa-linux" },
+      { skill: "Postman" },
+      { skill: "WordPress", iconClass: "fab fa-wordpress" }
+    ]
   }
 ];
 
