@@ -54,7 +54,7 @@ export const MyWorkData: MyWorkProps[] = [
   },
   {
     link: "https://wamal.rescuegroups.org",
-    title: "WALMAL Malamute Rescue",
+    title: "WAMAL Malamute Rescue",
     description: [
       "Volunteered my time to a local rescue group to help set up a new website. The site is hosted on a very limited platform, so there isn't a lot to customize. I mostly helped with theming, and setting guidelines for how content should be written.",
       "I also installed affiliate and social links for donations and spreading the word."
