@@ -23,9 +23,6 @@ jobs:
     - run:
         name: run-lint
         command: npm run lint:ts
-    - run:
-        name: run-tests
-        command: npm test
 workflows:
   version: 2
   run_tests:
