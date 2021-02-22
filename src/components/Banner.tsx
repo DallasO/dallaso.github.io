@@ -149,8 +149,8 @@ function Banner(): JSX.Element {
       <CloseButton
         aria-label="Close banner"
         onClick={(): void => handleClick()}
-        onMouseEnter={(): any => set({ color: "#50fa7b", z: 180 })}
-        onMouseLeave={(): any => set({ color: "#8be9fd", z: 0 })}
+        onMouseEnter={(): any => set({ color: "#50fa7b", z: 0 })}
+        onMouseLeave={(): any => set({ color: "#8be9fd", z: 180 })}
         style={
           {
             color
