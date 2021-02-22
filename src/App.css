@@ -106,10 +106,6 @@ main.about-me .item > *:first-child {
   background-color: transparent;
 }
 
-main.about-me .item .showcase {
-  text-align: justify;
-}
-
 footer {
   grid-area: footer;
   display: grid;
