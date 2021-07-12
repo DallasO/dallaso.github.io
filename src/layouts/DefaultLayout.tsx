@@ -15,7 +15,18 @@ type DefaultLayoutProps = {
 function DefaultLayout({ children }: DefaultLayoutProps): JSX.Element {
   return (
     <div>
-      <Banner />
+      <Banner
+        bannerText={
+          [
+            //   "Text1",
+            //   "Text2",
+            //   "Text3",
+            //   <>
+            //     moar text <i className="fas fa-external-link-alt"></i>
+            //   </>
+          ]
+        }
+      />
       <div className="App">
         <Header />
 

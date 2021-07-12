@@ -62,16 +62,24 @@ const TrailText = styled(a.span)`
   }
 `;
 
-const bannerText = [
-  "BLACK",
-  "LIVES",
-  "MATTER",
-  <>
-    Please consider donating <i className="fas fa-external-link-alt"></i>
-  </>
-];
+// const bannerText: [string | React.ReactElement] | [] = [
+//   "BLACK",
+//   "LIVES",
+//   "MATTER",
+//   <>
+//     Please consider donating <i className="fas fa-external-link-alt"></i>
+//   </>
+// ];
 
-function Banner(): JSX.Element {
+export interface BannerText {
+  [index: number]: string | React.ReactElement;
+}
+
+export interface BannerProps {
+  bannerText: BannerText[];
+}
+
+function Banner({ bannerText }: BannerProps): JSX.Element {
   const [banner, setBannner] = useState(true);
 
   // BEGIN:: BackgroundSpring
@@ -120,7 +128,7 @@ function Banner(): JSX.Element {
     set({ color: "#8be9fd", z: 0 });
   };
 
-  return (
+  return bannerText.length ? (
     <Container style={backgroundTransition as any}>
       {bannerTransition(
         (style, item) =>
@@ -165,6 +173,8 @@ function Banner(): JSX.Element {
         ></a.i>
       </CloseButton>
     </Container>
+  ) : (
+    <></>
   );
 }
 
