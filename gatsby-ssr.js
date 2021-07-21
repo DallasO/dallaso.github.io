@@ -11,6 +11,7 @@ const React = require("react");
 
 const HeadComponents = [
   <title key="title">Dallas Opelt</title>,
+  <link key="canonical" rel="canonical" href="https://dallasopelt.dev/" />,
   <meta
     key="Description"
     name="description"
