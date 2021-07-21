@@ -67,7 +67,7 @@ export const MyWorkData: MyWorkProps[] = [
         Worked directly with the marketing department for a Fortune 500 company,
         to create landing pages, emails, and online content for a global
         website. Managed content and translations to create responsive modern
-        HTML. Used JavaScript, jQuery, and API's for marketing automation,
+        HTML. Used JavaScript, jQuery, and API&apos;s for marketing automation,
         tracking, and advanced user interactions.
       </>
     ],
@@ -110,9 +110,9 @@ export const MyWorkData: MyWorkProps[] = [
     description: [
       <>
         Volunteered my time to a local rescue group to help set up a new
-        website. The site is hosted on a very limited platform, so there isn't a
-        lot to customize. I mostly helped with theming, and setting guidelines
-        for how content should be written.
+        website. The site is hosted on a very limited platform, so there
+        isn&apos;t a lot to customize. I mostly helped with theming, and setting
+        guidelines for how content should be written.
       </>,
       <>
         I also installed affiliate and social links for donations and spreading
