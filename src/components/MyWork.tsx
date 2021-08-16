@@ -14,9 +14,27 @@ export default function MyWork(): JSX.Element {
 
           return (
             <div className="showcase" key={alt}>
-              <a href={myWork.link} target="_blank" rel="noopener noreferrer">
-                {myWork.titleAlt ? myWork.titleAlt : <h3>{myWork.title}</h3>}
-              </a>
+              {myWork.titleAlt ? (
+                <div style={{ textAlign: "center", marginBottom: "10px" }}>
+                  <a
+                    href={myWork.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {myWork.titleAlt}
+                  </a>
+                </div>
+              ) : (
+                <h3>
+                  <a
+                    href={myWork.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {myWork.title}
+                  </a>
+                </h3>
+              )}
               {myWork.description.map(
                 (desc): JSX.Element => (
                   <p key={`desc_${Math.random()}`}>{desc}</p>

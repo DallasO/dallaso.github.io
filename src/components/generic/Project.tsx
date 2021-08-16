@@ -10,9 +10,11 @@ export default function Project(props: ProjectProps): JSX.Element {
   const { desc, href, title } = props;
   return (
     <div>
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        <h3>{title}</h3>
-      </a>
+      <h3>
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          {title}
+        </a>
+      </h3>
       <p>{desc}</p>
     </div>
   );

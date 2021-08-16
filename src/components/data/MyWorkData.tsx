@@ -76,11 +76,9 @@ export const MyWorkData: MyWorkProps[] = [
   {
     link: "https://iittala.com.au",
     title: "Iittala",
-    titleAlt: (
-      <img src={IittalaLogo} alt="Iittala" className="img-responsive logo" />
-    ),
+    titleAlt: <img src={IittalaLogo} alt="Iittala" className="logo" />,
     description: [
-      <>Completely rethemed the frontend as specified by a designer.</>,
+      <>Completely themed the frontend as specified by a designer.</>,
       <>
         Cleaned up unused CSS from older themes. Integrated with existing XCart
         API for easy future updates.
