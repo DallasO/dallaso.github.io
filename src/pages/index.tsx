@@ -1,6 +1,6 @@
 import React from "react";
 // Components
-import Layout from "../layouts/DefaultLayout";
+import Layout from "../layouts/Default";
 import AboutMe from "../components/AboutMe";
 import MySkills from "../components/MySkills";
 import MyWork from "../components/MyWork";
