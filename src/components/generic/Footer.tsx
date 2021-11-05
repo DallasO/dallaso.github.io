@@ -13,7 +13,6 @@ export default function Footer(): JSX.Element {
       <div className="links">
         <Social icon="github" />
         <Social icon="linkedin" />
-        <Social icon="hackerrank" />
       </div>
       <Copyright />
     </footer>

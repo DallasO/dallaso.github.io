@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface SocialIconProps {
-  icon: "github" | "linkedin" | "hackerrank";
+  icon: "github" | "linkedin";
   link?: string;
 }
 
@@ -30,18 +30,6 @@ export default function Social(props: SocialIconProps): JSX.Element | null {
           title="LinkedIn"
         >
           <i className="fab fa-linkedin" />
-        </a>
-      );
-    case "hackerrank":
-      return (
-        <a
-          className="social-link"
-          href={link || "https://www.hackerrank.com/opeltd/"}
-          rel="noopener noreferrer"
-          target="_blank"
-          title="HackerRank"
-        >
-          <i className="fab fa-hackerrank" />
         </a>
       );
     default:
