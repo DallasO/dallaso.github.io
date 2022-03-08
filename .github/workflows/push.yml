@@ -1,0 +1,42 @@
+name: Pull Request
+
+on:
+  push:
+    branches:
+      - next
+      - feat/cd-pipeline
+
+jobs:
+  Build-and-Test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.1.0
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+
+      - name: Install Dependencies and Build
+        run: |
+          npm ci
+          npm run build
+        env:
+          CI: true
+
+      - name: Run TS Lint
+        run: |
+          npm run lint:ts
