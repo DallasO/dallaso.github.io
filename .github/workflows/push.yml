@@ -5,6 +5,10 @@ on:
     branches:
       - next
       - feat/cd-pipeline
+  pull_request:
+    branches:
+      - next
+      - feat/cd-pipeline
 
 jobs:
   Build-and-Test:
