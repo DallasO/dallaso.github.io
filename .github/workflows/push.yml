@@ -53,4 +53,6 @@ jobs:
       - name: Deploy
         if: ${{ github.event_name == 'push' }}
         run: |
+          git config --local user.email "$(git log --format='%ae' HEAD^!)"
+          git config --local user.name "$(git log --format='%an' HEAD^!)"
           npm run deploy
