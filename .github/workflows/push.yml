@@ -34,13 +34,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-build-
 
-      - name: Install Dependencies and Build
+      - name: Install Dependencies
         run: |
           npm ci
-          npm run build
         env:
           CI: true
 
       - name: Run TS Lint
         run: |
           npm run lint:ts
+
+      - name: Build
+        run: |
+          npm run build
+        env:
+          CI: true
