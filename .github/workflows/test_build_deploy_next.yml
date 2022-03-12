@@ -1,0 +1,59 @@
+name: Test, Build, and Deploy `next`
+
+on:
+  push:
+    branches:
+      - next
+  pull_request:
+    branches:
+      - next
+
+jobs:
+  Build-and-Test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.1.0
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+        env:
+          CI: true
+
+      - name: Run TS Lint
+        run: |
+          npm run lint:ts
+
+      - name: Build
+        run: |
+          npm run build
+        env:
+          CI: true
+
+      - name: Deploy
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          git config --local user.email "support+actions@github.com"
+          git config --local user.name "github-actions-bot"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
