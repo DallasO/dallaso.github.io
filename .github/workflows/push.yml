@@ -49,3 +49,8 @@ jobs:
           npm run build
         env:
           CI: true
+
+      - name: Deploy
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          npm run deploy
