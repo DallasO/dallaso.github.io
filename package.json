@@ -23,7 +23,7 @@
     "clean": "gatsby clean",
     "debug": "npm i --no-save && npm run clean && npm run develop",
     "develop": "gatsby develop",
-    "deploy": "cp -r .circleci/ public/ && npm run ghpages",
+    "deploy": "npm run ghpages",
     "ghpages": "gh-pages -b master -d public -t",
     "build": "gatsby build",
     "serve": "gatsby serve",
