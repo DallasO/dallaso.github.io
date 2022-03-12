@@ -53,6 +53,8 @@ jobs:
       - name: Deploy
         if: ${{ github.event_name == 'push' }}
         run: |
+          git config --local user.email "support+actions@github.com"
+          git config --local user.name "github-actions-bot"
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
