@@ -1,6 +1,5 @@
-[![CircleCI](https://circleci.com/gh/DallasO/dallaso.github.io.svg?style=svg)](https://circleci.com/gh/DallasO/dallaso.github.io)
+[![Test, Build, and Deploy `next`](https://github.com/DallasO/dallaso.github.io/actions/workflows/test_build_deploy_next.yml/badge.svg)](https://github.com/DallasO/dallaso.github.io/actions/workflows/test_build_deploy_next.yml)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/DallasO/dallaso.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/DallasO/dallaso.github.io/context:javascript)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/DallasO/dallaso.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/DallasO/dallaso.github.io/alerts/)
 
 # Welcome to my Portfolio
 
