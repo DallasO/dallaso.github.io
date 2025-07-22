@@ -5,7 +5,7 @@
   "homepage": "https://dallasopelt.dev/",
   "dependencies": {
     "@loadable/component": "^5.13.2",
-    "gatsby": "^2.24.57",
+    "gatsby": "^5.14.5",
     "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-manifest": "^2.4.28",
     "gatsby-plugin-offline": "^3.2.27",
