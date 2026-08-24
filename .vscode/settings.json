@@ -1,36 +1,73 @@
 {
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": false
-      },
-      "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": false
-      },
-      "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": false
-      },
-      "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": false
-      },
-      "eslint.autoFixOnSave": true,
-      "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        {
-          "autoFix": true,
-          "language": "typescript"
-        },
-        {
-          "autoFix": true,
-          "language": "typescriptreact"
-        }
-      ],
-      "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-      },
-      "eslint.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "autoFix": true,
+      "language": "typescript"
+    },
+    {
+      "autoFix": true,
+      "language": "typescriptreact"
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.enable": true,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#7088d6",
+    "activityBar.background": "#7088d6",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#952b44",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "activityBarTop.activeBackground": "#7088d6",
+    "activityBarTop.background": "#7088d6",
+    "activityBarTop.foreground": "#15202b",
+    "activityBarTop.inactiveForeground": "#15202b99",
+    "commandCenter.border": "#e7e7e799",
+    "commandCenter.foreground": "#e7e7e7",
+    "editorError.foreground": "#00000000",
+    "editorGroup.border": "#7088d6",
+    "editorInfo.foreground": "#00000000",
+    "editorWarning.foreground": "#00000000",
+    "panel.border": "#7088d6",
+    "sash.hoverBorder": "#7088d6",
+    "sideBar.border": "#7088d6",
+    "statusBar.background": "#4867cb",
+    "statusBar.border": "#4867cb",
+    "statusBar.debuggingBackground": "#cbac48",
+    "statusBar.debuggingBorder": "#cbac48",
+    "statusBar.debuggingForeground": "#15202b",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#7088d6",
+    "statusBarItem.remoteBackground": "#631c2d",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "tab.activeBorder": "#7088d6",
+    "titleBar.activeBackground": "#4867cb",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.border": "#4867cb",
+    "titleBar.inactiveBackground": "#4867cb99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#4867cb"
 }

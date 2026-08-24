@@ -1,4 +1,0 @@
-src/registerServiceWorker.*
-src/**/__tests__/**
-src/**/*test*
-src/**/*wip*

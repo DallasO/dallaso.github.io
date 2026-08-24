@@ -1,12 +1,10 @@
-import React from "react";
-
 export interface ProjectProps {
   desc: string;
   href: string;
   title: string;
 }
 
-export default function Project(props: ProjectProps): JSX.Element {
+export default function Project(props: ProjectProps) {
   const { desc, href, title } = props;
   return (
     <div>

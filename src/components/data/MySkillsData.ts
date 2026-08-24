@@ -1,9 +1,9 @@
-import Gatsby from "../../img/Gatsby-Logo.svg";
-import Typescript from "../../img/Typescript-Logo.svg";
-import Unity3D from "../../img/Unity3D-Logo.svg";
+import Gatsby from "../../assets/Gatsby-Logo.svg";
+import Typescript from "../../assets/Typescript-Logo.svg";
+import Unity3D from "../../assets/Unity3D-Logo.svg";
 
 export interface MySkillsProps {
-  icons?: any;
+  icons?: unknown;
   title: string;
   skills: {
     skill: string;

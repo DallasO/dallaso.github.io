@@ -1,7 +1,6 @@
-import React from "react";
 import Social from "./Social";
 
-export default function Header(): JSX.Element {
+export default function Header() {
   return (
     <header className="App-header">
       <div className="name">

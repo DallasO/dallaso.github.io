@@ -8,10 +8,13 @@ This is the codebase for my portfolio. It's built with React and Typescript, and
 [Take a look at my Portfolio](https://dallasopelt.dev/)
 
 ## To-do
-* Maybe - Change `<Social>` to accept a list or icon string.  
-The list will return the container and list of icons, the string will return only the icon.
-* Add additional pages for experience, projects, like an online resume
-* Provide option for light theme
 
+- missing eslint plugins:
+  - jsx-ally
+  - yaml
+- Maybe - Change `<Social>` to accept a list or icon string.  
+  The list will return the container and list of icons, the string will return only the icon.
+- Add additional pages for experience, projects, like an online resume
+- Provide option for light theme
 
-This project is built with [GatsbyJS](https://www.gatsbyjs.com/) and [ReactJS](https://reactjs.org/).
+This project is built with [Vite](https://vite.dev/) and [ReactJS](https://reactjs.org/).

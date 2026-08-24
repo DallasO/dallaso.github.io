@@ -1,36 +1,30 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
-
-// You can delete this file if you're not using it
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const React = require("react");
-
-const HeadComponents = [
-  <title key="title">Dallas Opelt</title>,
-  <link key="canonical" rel="canonical" href="https://dallasopelt.dev/" />,
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dallas Opelt</title>
+    <link key="canonical" rel="canonical" href="https://dallasopelt.dev/" />
   <meta
     key="Description"
     name="description"
     content="Full stack web developer located in the greater Seattle area"
-  />,
+  />
   <link
     key="fa-solid"
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css"
     integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B"
     crossOrigin="anonymous"
-  />,
+  />
   <link
     key="fa-brands"
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.7.2/css/brands.css"
     integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK"
     crossOrigin="anonymous"
-  />,
+  />
   <link
     key="fa"
     rel="stylesheet"
@@ -38,9 +32,9 @@ const HeadComponents = [
     integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+"
     crossOrigin="anonymous"
   />
-];
-
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-exports.onRenderBody = ({ setHeadComponents }) => {
-  setHeadComponents(HeadComponents);
-};
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

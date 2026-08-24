@@ -37,7 +37,7 @@ p {
   line-height: 1.25;
 }
 
-.App {
+#root {
   max-width: 100%;
   display: grid;
   grid-template:
@@ -239,7 +239,7 @@ main.about-me .item > a {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .App {
+  #root {
     max-width: 750px;
     margin: 0 auto;
   }
@@ -276,7 +276,7 @@ main.about-me .item > a {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .App {
+  #root {
     max-width: 1170px;
   }
 }

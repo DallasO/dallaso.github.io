@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function AboutMe(): JSX.Element {
+export default function AboutMe() {
   return (
     <div className="item">
       <div>

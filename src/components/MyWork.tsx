@@ -1,27 +1,25 @@
-import React from "react";
-
 import { MyWorkData } from "./data/MyWorkData";
 
-export default function MyWork(): JSX.Element {
+export default function MyWork() {
   return (
     <div className="item large">
       <div>
         <h2>Experience</h2>
       </div>
       {MyWorkData.map(
-        (myWork): JSX.Element => {
+        (myWork) => {
           const alt: string = myWork.alt ? myWork.alt : myWork.title;
 
           return (
             <div className="showcase" key={alt}>
-              {myWork.titleAlt ? (
+              {myWork.titleLogo ? (
                 <div style={{ textAlign: "center", marginBottom: "10px" }}>
                   <a
                     href={myWork.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {myWork.titleAlt}
+                    <img alt={myWork.title} className="logo" src={myWork.titleLogo} />
                   </a>
                 </div>
               ) : (
@@ -36,7 +34,7 @@ export default function MyWork(): JSX.Element {
                 </h3>
               )}
               {myWork.description.map(
-                (desc): JSX.Element => (
+                (desc) => (
                   <p key={`desc_${Math.random()}`}>{desc}</p>
                 )
               )}

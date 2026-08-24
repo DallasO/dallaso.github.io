@@ -1,16 +1,14 @@
-import React from "react";
-
 import Project from "./generic/Project";
 import { MyProjectsData as myProjects } from "./data/MyProjectsData";
 
-export default function MyProjects(): JSX.Element {
+export default function MyProjects() {
   return (
     <div className="item">
       <div>
         <h2>Projects</h2>
       </div>
       {myProjects.map(
-        (project): JSX.Element => (
+        (project) => (
           <Project
             title={project.title}
             desc={project.desc}

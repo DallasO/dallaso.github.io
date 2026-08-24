@@ -1,11 +1,9 @@
-import React from "react";
-
 export interface SocialIconProps {
   icon: "github" | "linkedin";
   link?: string;
 }
 
-export default function Social(props: SocialIconProps): JSX.Element | null {
+export default function Social(props: SocialIconProps): React.ReactElement | null {
   const { link } = props;
   switch (props.icon) {
     case "github":
